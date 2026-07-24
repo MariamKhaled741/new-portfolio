@@ -1,0 +1,50 @@
+$purple-primary: #6366f1;
+$text-gray: #9ca3af;
+$bg-dark: #111827; // درجة غامقة شيك جداً لقفل الصفحة
+$white: #ffffff;
+
+.main-footer {
+  background-color: $bg-dark;
+  color: $white;
+  padding: 30px 8%;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; // 👈 ده هيجيب المحتوى كله في نص الصفحة بالظبط
+    align-items: center;
+    text-align: center;      // 👈 عشان نضمن إن الكلام يتسنتر لو نزل على سطرين في الموبايل
+  }
+
+  .footer-left {
+    p {
+      color: $text-gray;
+      margin: 0;
+      
+      .highlight {
+        color: $white;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// أنيميشن لطيف للقلب
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+@media (max-width: 600px) {
+  .main-footer {
+    padding: 20px;
+    text-align: center;
+    
+    .footer-content {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}

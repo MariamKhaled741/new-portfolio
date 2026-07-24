@@ -1,0 +1,54 @@
+<nav class="nav-container">
+  <!-- الناحية الشمال: مكان مدور للوجو -->
+  <div class="nav-logo-slot">
+    <img src="images/Logo.jpg" alt="Mariam Khaled Logo">
+  </div>
+
+  <!-- زرار الموبايل (الهامبرجر) -->
+  <button class="nav-toggle" (click)="toggleMenu()" [class.open]="isMenuOpen" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- الناحية اليمين: اسماء السكاشن وزرار Contact me -->
+  <div class="nav-menu" [class.active]="isMenuOpen">
+    <ul class="nav-links">
+      <li>
+        <a href="javascript:void(0)" 
+           [class.active]="activeSection === 'hero'" 
+           (click)="scrollToSection('hero')">Home</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" 
+           [class.active]="activeSection === 'about'" 
+           (click)="scrollToSection('about')">About me</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" 
+           [class.active]="activeSection === 'trainings'" 
+           (click)="scrollToSection('trainings')">Trainings</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" 
+           [class.active]="activeSection === 'projects'" 
+           (click)="scrollToSection('projects')">Projects</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" 
+           [class.active]="activeSection === 'certifications'" 
+           (click)="scrollToSection('certifications')">Certifications</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" 
+           [class.active]="activeSection === 'extracurricular'" 
+           (click)="scrollToSection('extracurricular')">Extracurricular</a>
+      </li>
+    </ul>
+    
+    <a href="javascript:void(0)" 
+       class="nav-btn" 
+       [class.active]="activeSection === 'contact'" 
+       (click)="scrollToSection('contact')">Contact me</a>
+  </div>
+</nav>

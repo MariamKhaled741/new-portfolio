@@ -1,0 +1,32 @@
+<div class="cert-container">
+  
+  <div class="cert-header">
+    <h2>My <span class="highlight">Certifications</span></h2>
+    <p class="cert-subtitle">Verified credentials from world-class tech institutions and platforms</p>
+  </div>
+
+  <div class="cert-grid">
+    <div class="cert-card" *ngFor="let cert of displayedCertifications" [class.featured]="cert.isFeatured">
+      
+      <!-- الأيقونة الشيك بدل مسار الصورة الغايب -->
+      <div class="cert-icon-box">
+        <i [class]="cert.icon"></i>
+      </div>
+
+      <div class="cert-info">
+        <span class="cert-badge" *ngIf="cert.isFeatured">Top Credential</span>
+        <h3>{{ cert.title }}</h3>
+        <h4>{{ cert.issuer }}</h4>
+        <p class="cert-date"><i class="fa-regular fa-calendar-days"></i> {{ cert.date }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="show-more-wrapper">
+    <button class="show-more-btn" (click)="toggleShowMore()">
+      {{ showAll ? 'Show Less' : 'Show All Certifications (' + allCertifications.length + ')' }}
+      <i class="fa-solid" [class.fa-chevron-down]="!showAll" [class.fa-chevron-up]="showAll"></i>
+    </button>
+  </div>
+
+</div>

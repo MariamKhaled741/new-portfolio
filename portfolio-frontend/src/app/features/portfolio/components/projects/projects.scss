@@ -1,0 +1,191 @@
+$purple-primary: #6366f1;
+$purple-hover: #4f46e5;
+$text-dark: #1f2937;
+$text-gray: #4b5563;
+$bg-light: #f9fafb;
+$white: #ffffff;
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  .projects-header {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 2.5rem;
+      color: $text-dark;
+      font-weight: 700;
+      .highlight { color: $purple-primary; }
+    }
+
+    .projects-subtitle {
+      color: $text-gray;
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+  }
+
+  // ستايل أزرار الفلتر
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+
+    .filter-btn {
+      background-color: $white;
+      border: 2px solid $purple-primary;
+      color: $purple-primary;
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover, &.active {
+        background-color: $purple-primary;
+        color: $white;
+      }
+    }
+  }
+
+  // شبكة الكروت (Grid)
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+  }
+
+  // الكارت نفسه
+  .project-card {
+    background: $white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(99, 102, 241, 0.15);
+    }
+
+    .project-image {
+      height: 180px;
+      background-color: $purple-primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .image-placeholder {
+        font-size: 4rem;
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    .project-info {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      h3 {
+        font-size: 1.25rem;
+        color: $text-dark;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .project-desc {
+        color: $text-gray;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        flex-grow: 1;
+      }
+
+      .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 20px;
+
+        .tech-tag {
+          background-color: $bg-light;
+          color: $purple-primary;
+          font-size: 0.8rem;
+          padding: 5px 12px;
+          border-radius: 15px;
+          font-weight: 600;
+          border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+      }
+
+      .project-links {
+        display: flex;
+        gap: 15px;
+
+        .btn-link {
+          flex: 1;
+          text-align: center;
+          padding: 8px 0;
+          border-radius: 10px;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 0.9rem;
+          transition: 0.3s;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+
+          &.btn-github {
+            background-color: #24292e;
+            color: $white;
+            &:hover { background-color: #000000; }
+          }
+
+          &.btn-demo {
+            background-color: $purple-primary;
+            color: $white;
+            &:hover { background-color: $purple-hover; }
+          }
+        }
+      }
+    }
+  }
+
+  // ستايل زرار الـ Show More المضاف في الأسفل
+  .show-more-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    .show-more-btn {
+      background-color: $white;
+      border: 2px solid $purple-primary;
+      color: $purple-primary;
+      padding: 12px 35px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $purple-primary;
+        color: $white;
+        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
+      }
+    }
+  }
+}

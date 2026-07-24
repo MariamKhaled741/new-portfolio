@@ -1,0 +1,189 @@
+// الألوان الأساسية
+$purple-primary: #6366f1;
+$purple-bg: #6366f1;       // خلفية الناف بار موف
+$purple-dark: #4f46e5;
+$white-color: #ffffff;
+
+.nav-container {
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  width: 90%;
+  max-width: 1250px;
+  margin: 6px auto 0 auto; // لغينا المسافة اللي تحت خالص عشان يلزق في الهيرو
+  padding: 12px 30px;
+  border: #415269 4px solid;
+  background-color: $purple-bg;
+  backdrop-filter: blur(8px);
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.25);
+  
+  position: sticky;
+  top: 6px; // قريب جداً من قمة الشاشة
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+
+  // الناحية الشمال: مكان مدور للوجو بإطار أبيض
+  .nav-logo-slot {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: $white-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // الناحية اليمين: السكاشن وزر Contact me
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+
+      a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.85); // لون أبيض هادئ لللينكات
+        font-weight: 600;
+        font-size: 0.9rem;
+        padding: 8px 14px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: $white-color;
+          background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        // السكشن اللي واقفة فيه (منور بأبيض ناصع)
+        &.active {
+          color: $purple-primary;
+          background-color: $white-color;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          font-weight: 700;
+        }
+      }
+    }
+
+    // زرار Contact me باللون الأبيض والخط الموف
+    .nav-btn {
+      text-decoration: none;
+      background-color: $white-color;
+      color: $purple-primary;
+      padding: 9px 22px;
+      border-radius: 25px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #f3f4f6;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+  // زرار الموبايل (الهامبرجر) بلون أبيض
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 3px;
+      background-color: $white-color;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    &.open {
+      span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+      span:nth-child(2) { opacity: 0; }
+      span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    }
+  }
+
+  // 📱 التجاوب مع شاشات الموبايل والتابلت
+  // 📱 التجاوب مع شاشات الموبايل والتابلت
+  @media (max-width: 1100px) {
+    width: 92%;
+    padding: 10px 20px;
+    border-radius: 30px;
+
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-menu {
+      position: absolute;
+      top: 75px; // مسافة مناسبة تحت الناف بار مباشرة
+      left: 0;
+      width: 100%;
+      background-color: $purple-bg; 
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      flex-direction: column;
+      padding: 25px;
+      gap: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      
+      // التعديلات المهمة لمنع اختفاء أو تداخل الكلام أثناء القفل والفتح
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden; // 👈 بيمنع ظهور الكلام وهو مقفول
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+
+      // لما القائمة تتفتح
+      &.active {
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible; // 👈 بيظهر الكلام بوضوح تام عند الفتح
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+
+        a {
+          display: block;
+          text-align: center;
+          width: 100%;
+          padding: 12px;
+          color: $white-color;
+        }
+      }
+
+      .nav-btn {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+      }
+    }
+  }
+}

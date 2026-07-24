@@ -1,0 +1,122 @@
+$purple-primary: #6366f1;
+$purple-light: #f5f3ff;
+$text-dark: #1f2937;
+$text-gray: #4b5563;
+$white: #ffffff;
+
+.activities-container {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .activities-header {
+    text-align: center;
+    margin-bottom: 45px;
+
+    h2 {
+      font-size: 2.5rem;
+      color: $text-dark;
+      font-weight: 700;
+      .highlight { color: $purple-primary; }
+    }
+
+    .activities-subtitle {
+      color: $text-gray;
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+  }
+
+  .activities-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .activity-card {
+    background: $white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: rgba(99, 102, 241, 0.3);
+      transform: translateX(5px);
+      box-shadow: 0 10px 25px rgba(99, 102, 241, 0.04);
+      
+      .activity-icon-box {
+        background-color: $purple-primary;
+        color: $white;
+      }
+    }
+
+    .activity-icon-box {
+      width: 55px;
+      height: 55px;
+      background-color: $purple-light;
+      color: $purple-primary;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    .activity-info {
+      flex-grow: 1;
+
+      .activity-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        h3 {
+          font-size: 1.2rem;
+          color: $text-dark;
+          font-weight: 700;
+        }
+
+        .activity-date {
+          font-size: 0.85rem;
+          background-color: $purple-light;
+          color: $purple-primary;
+          padding: 4px 12px;
+          border-radius: 15px;
+          font-weight: 600;
+        }
+      }
+
+      h4 {
+        font-size: 0.95rem;
+        color: $text-gray;
+        margin: 4px 0 12px 0;
+        font-weight: 500;
+      }
+
+      .activity-desc {
+        color: $text-gray;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .activity-card {
+      flex-direction: column;
+      
+      .activity-info .activity-meta {
+        flex-direction: column;
+        .activity-date { align-self: flex-start; }
+      }
+    }
+  }
+}

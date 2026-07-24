@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #faf8f5; // لون خلفية خفيف لللايت مود (أو الأبيض بتاعك)
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
