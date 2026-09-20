@@ -49,8 +49,8 @@
 
     <!-- الجهة اليمنى: فورم التواصل السريع -->
     <div class="contact-form-panel">
-      <form (submit)="onSubmit($event)">
-        <div class="form-group">
+<form (ngSubmit)="onSubmit()">
+          <div class="form-group">
           <label for="name">Your Name</label>
           <input type="text" id="name" required placeholder="Mariam Khaled">
         </div>
