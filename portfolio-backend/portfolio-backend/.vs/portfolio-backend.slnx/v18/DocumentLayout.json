@@ -3,52 +3,91 @@
   "WorkspaceRootPath": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\controllers\\certificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\controllers\\certificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\ContactMessagesController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:portfolio-backend\\Controllers\\ContactMessagesController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\CertificationsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:portfolio-backend\\Controllers\\CertificationsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\ProjectsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:portfolio-backend\\Controllers\\ProjectsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Migrations\\20260920223724_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:portfolio-backend\\Migrations\\20260920223724_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\models\\contactmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\models\\contactmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\models\\certification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\models\\certification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\controllers\\trainingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\controllers\\trainingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\controllers\\educationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\controllers\\educationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\wwwroot\\uploads\\profile.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\wwwroot\\uploads\\profile.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\portfolio-backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\portfolio-backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\controllers\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\controllers\\activitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\models\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\models\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\models\\contactmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\models\\contactmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\models\\profileinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\models\\profileinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\models\\activity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\models\\activity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\models\\training.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\models\\training.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\controllers\\contactmessagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\controllers\\contactmessagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|c:\\users\\maria\\desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\migrations\\20260920223724_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33FE7AC5-BF4C-F2ED-4B28-0E999C56084B}|portfolio-backend\\portfolio-backend.csproj|solutionrelative:portfolio-backend\\migrations\\20260920223724_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,58 +97,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "portfolio-backend\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Properties\\launchSettings.json",
-              "RelativeToolTip": "portfolio-backend\\Properties\\launchSettings.json",
-              "ViewState": "AgIAABcAAAAAAAAAAAAowBgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-20T22:46:22.171Z",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Program.cs",
+              "RelativeDocumentMoniker": "portfolio-backend\\Program.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Program.cs",
+              "RelativeToolTip": "portfolio-backend\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-20T22:31:34.086Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "CertificationsController.cs",
               "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\CertificationsController.cs",
               "RelativeDocumentMoniker": "portfolio-backend\\Controllers\\CertificationsController.cs",
               "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\CertificationsController.cs",
               "RelativeToolTip": "portfolio-backend\\Controllers\\CertificationsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-20T22:42:12.942Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Program.cs",
-              "RelativeDocumentMoniker": "portfolio-backend\\Program.cs",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Program.cs",
-              "RelativeToolTip": "portfolio-backend\\Program.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAADwvyoAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-20T22:31:34.086Z",
+              "DocumentIndex": 1,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\18\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAFQVAAAAAAAAAAAwwGIVAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-09-21T22:50:20.677Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ContactMessagesController.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\ContactMessagesController.cs",
-              "RelativeDocumentMoniker": "portfolio-backend\\Controllers\\ContactMessagesController.cs",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\ContactMessagesController.cs",
-              "RelativeToolTip": "portfolio-backend\\Controllers\\ContactMessagesController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwA8AAAAbAAAAAAAAAA==",
+              "Title": "Certification.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\Certification.cs",
+              "RelativeDocumentMoniker": "portfolio-backend\\Models\\Certification.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\Certification.cs",
+              "RelativeToolTip": "portfolio-backend\\Models\\Certification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-20T22:42:58.484Z",
+              "WhenOpened": "2026-09-20T22:29:04.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "portfolio-backend\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "portfolio-backend\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-20T22:30:15.857Z",
               "EditorCaption": ""
             },
             {
@@ -120,7 +173,7 @@
               "RelativeDocumentMoniker": "portfolio-backend\\Controllers\\ProjectsController.cs",
               "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\ProjectsController.cs",
               "RelativeToolTip": "portfolio-backend\\Controllers\\ProjectsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAgwCgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-20T22:41:09.663Z",
               "EditorCaption": ""
@@ -128,19 +181,70 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "20260920223724_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Migrations\\20260920223724_InitialCreate.cs",
-              "RelativeDocumentMoniker": "portfolio-backend\\Migrations\\20260920223724_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Migrations\\20260920223724_InitialCreate.cs",
-              "RelativeToolTip": "portfolio-backend\\Migrations\\20260920223724_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\Project.cs",
+              "RelativeDocumentMoniker": "portfolio-backend\\Models\\Project.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\Project.cs",
+              "RelativeToolTip": "portfolio-backend\\Models\\Project.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-20T22:37:24.798Z",
+              "WhenOpened": "2026-09-20T22:28:29.182Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "TrainingsController.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\TrainingsController.cs",
+              "RelativeDocumentMoniker": "portfolio-backend\\Controllers\\TrainingsController.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\TrainingsController.cs",
+              "RelativeToolTip": "portfolio-backend\\Controllers\\TrainingsController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T20:16:15.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EducationController.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\EducationController.cs",
+              "RelativeDocumentMoniker": "portfolio-backend\\Controllers\\EducationController.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\EducationController.cs",
+              "RelativeToolTip": "portfolio-backend\\Controllers\\EducationController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBoAAACQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T20:47:19.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "portfolio-backend\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "portfolio-backend\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwBMAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T20:41:23.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "profile.jpg -  [English (United Kingdom)] - Bitmap [720x1280, 24 bit, JPG]",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\wwwroot\\uploads\\profile.jpg",
+              "RelativeDocumentMoniker": "portfolio-backend\\wwwroot\\uploads\\profile.jpg",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\wwwroot\\uploads\\profile.jpg -  [English (United Kingdom)] - Bitmap [720x1280, 24 bit, JPG]",
+              "RelativeToolTip": "portfolio-backend\\wwwroot\\uploads\\profile.jpg -  [English (United Kingdom)] - Bitmap [720x1280, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-09-21T21:18:32.511Z",
+              "EditorCaption": " -  [English (United Kingdom)] - Bitmap [720x1280, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\appsettings.json",
               "RelativeDocumentMoniker": "portfolio-backend\\appsettings.json",
@@ -153,20 +257,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "portfolio-backend\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "portfolio-backend\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-20T22:30:15.857Z",
+              "DocumentIndex": 12,
+              "Title": "portfolio-backend.csproj",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\portfolio-backend.csproj",
+              "RelativeDocumentMoniker": "portfolio-backend\\portfolio-backend.csproj",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\portfolio-backend.csproj",
+              "RelativeToolTip": "portfolio-backend\\portfolio-backend.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-20T22:27:19.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
+              "Title": "ActivitiesController.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\ActivitiesController.cs",
+              "RelativeDocumentMoniker": "portfolio-backend\\Controllers\\ActivitiesController.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\ActivitiesController.cs",
+              "RelativeToolTip": "portfolio-backend\\Controllers\\ActivitiesController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T20:20:39.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Education.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\Education.cs",
+              "RelativeDocumentMoniker": "portfolio-backend\\Models\\Education.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\Education.cs",
+              "RelativeToolTip": "portfolio-backend\\Models\\Education.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T20:47:00.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "ContactMessage.cs",
               "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\ContactMessage.cs",
               "RelativeDocumentMoniker": "portfolio-backend\\Models\\ContactMessage.cs",
@@ -179,42 +309,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Certification.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\Certification.cs",
-              "RelativeDocumentMoniker": "portfolio-backend\\Models\\Certification.cs",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\Certification.cs",
-              "RelativeToolTip": "portfolio-backend\\Models\\Certification.cs",
+              "DocumentIndex": 16,
+              "Title": "ProfileInfo.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\ProfileInfo.cs",
+              "RelativeDocumentMoniker": "portfolio-backend\\Models\\ProfileInfo.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\ProfileInfo.cs",
+              "RelativeToolTip": "portfolio-backend\\Models\\ProfileInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T20:41:05.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Activity.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\Activity.cs",
+              "RelativeDocumentMoniker": "portfolio-backend\\Models\\Activity.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\Activity.cs",
+              "RelativeToolTip": "portfolio-backend\\Models\\Activity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-20T22:29:04.283Z",
+              "WhenOpened": "2026-09-21T20:20:18.192Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Project.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\Project.cs",
-              "RelativeDocumentMoniker": "portfolio-backend\\Models\\Project.cs",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\Project.cs",
-              "RelativeToolTip": "portfolio-backend\\Models\\Project.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "Training.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\Training.cs",
+              "RelativeDocumentMoniker": "portfolio-backend\\Models\\Training.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Models\\Training.cs",
+              "RelativeToolTip": "portfolio-backend\\Models\\Training.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-20T22:28:29.182Z",
+              "WhenOpened": "2026-09-21T20:15:44.661Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "portfolio-backend",
-              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\portfolio-backend.csproj",
-              "RelativeDocumentMoniker": "portfolio-backend\\portfolio-backend.csproj",
-              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\portfolio-backend.csproj",
-              "RelativeToolTip": "portfolio-backend\\portfolio-backend.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-09-20T22:27:19.134Z",
+              "DocumentIndex": 19,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "portfolio-backend\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Properties\\launchSettings.json",
+              "RelativeToolTip": "portfolio-backend\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-20T22:46:22.171Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ContactMessagesController.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\ContactMessagesController.cs",
+              "RelativeDocumentMoniker": "portfolio-backend\\Controllers\\ContactMessagesController.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Controllers\\ContactMessagesController.cs",
+              "RelativeToolTip": "portfolio-backend\\Controllers\\ContactMessagesController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAuwA8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-20T22:42:58.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20260920223724_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Migrations\\20260920223724_InitialCreate.cs",
+              "RelativeDocumentMoniker": "portfolio-backend\\Migrations\\20260920223724_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\maria\\Desktop\\my portfolio\\new-portfolio\\portfolio-backend\\portfolio-backend\\portfolio-backend\\Migrations\\20260920223724_InitialCreate.cs",
+              "RelativeToolTip": "portfolio-backend\\Migrations\\20260920223724_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-20T22:37:24.798Z"
             }
           ]
         }

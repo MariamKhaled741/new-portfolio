@@ -1,169 +1,57 @@
-$purple-primary: #6366f1;
-$purple-light: #f5f3ff;
-$text-dark: #1f2937;
-$text-gray: #4b5563;
-$white: #ffffff;
+.certifications-section {
+  padding: 2rem 1rem;
 
-.cert-container {
-  max-width: 1200px;
-  margin: 0 auto;
-
-  .cert-header {
-    text-align: center;
-    margin-bottom: 50px;
-    h2 {
-      font-size: 2.5rem;
-      color: $text-dark;
-      font-weight: 700;
-      .highlight { color: $purple-primary; }
-    }
-    .cert-subtitle { color: $text-gray; font-size: 1.1rem; margin-top: 10px; }
+  h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
   }
 
-  .cert-grid {
+  .certs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 25px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
   }
 
   .cert-card {
-    background: $white;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    border-radius: 20px;
-    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
-    gap: 18px;
-    align-items: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    align-items: flex-start;
+    gap: 1rem;
 
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     }
 
-    &.featured {
-      border: 2px solid rgba(99, 102, 241, 0.25);
-      background: linear-gradient(180deg, $white 0%, rgba(99, 102, 241, 0.02) 100%);
-      
-      &:hover { border-color: $purple-primary; }
+    .cert-icon {
+      font-size: 2.5rem;
+      background: #eef2f7;
+      padding: 0.5rem 0.8rem;
+      border-radius: 8px;
     }
 
-    // جزء الصورة المصغرة داخل الكارت
-    .cert-img-wrapper {
-      position: relative;
-      width: 90px;
-      height: 65px;
-      border-radius: 10px;
-      overflow: hidden;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      cursor: pointer;
-      flex-shrink: 0;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .img-overlay {
-        position: absolute;
-        top: 0; left: 0; width: 100%; height: 100%;
-        background-color: rgba(99, 102, 241, 0.4);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $white;
+    .cert-details {
+      h3 {
+        margin: 0 0 0.5rem 0;
         font-size: 1.1rem;
-        opacity: 0;
-        transition: opacity 0.2s ease;
+        color: #1a252f;
       }
 
-      &:hover .img-overlay {
-        opacity: 1;
-      }
-    }
-
-    .cert-info {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      flex-grow: 1;
-
-      .cert-badge {
-        align-self: flex-start;
-        background-color: rgba(99, 102, 241, 0.12);
-        color: $purple-primary;
-        font-size: 0.7rem;
-        padding: 2px 8px;
-        border-radius: 10px;
-        font-weight: 700;
+      p {
+        margin: 0.25rem 0;
+        font-size: 0.95rem;
+        color: #555;
       }
 
-      h3 { font-size: 1rem; color: $text-dark; font-weight: 700; line-height: 1.3; }
-      h4 { font-size: 0.88rem; color: $purple-primary; font-weight: 600; }
-      .cert-date { font-size: 0.8rem; color: $text-gray; margin-top: 2px; }
-    }
-  }
-
-  // زر Show More
-  .show-more-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    .show-more-btn {
-      background-color: $white; border: 2px solid $purple-primary; color: $purple-primary;
-      padding: 12px 30px; border-radius: 30px; font-weight: 600; cursor: pointer;
-      display: flex; align-items: center; gap: 10px; transition: all 0.3s ease;
-      &:hover { background-color: $purple-primary; color: $white; }
-    }
-  }
-
-  // ستايل الـ Lightbox البوب-أب
-  .lightbox-overlay {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(5px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    padding: 20px;
-
-    .lightbox-content {
-      position: relative;
-      max-width: 900px;
-      max-height: 85vh;
-      background-color: $white;
-      padding: 10px;
-      border-radius: 16px;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-
-      img {
-        max-width: 100%;
-        max-height: 80vh;
-        border-radius: 8px;
+      small {
+        color: #888;
         display: block;
-      }
-
-      .close-btn {
-        position: absolute;
-        top: -45px;
-        right: 0;
-        background: none;
-        border: none;
-        color: $white;
-        font-size: 2.5rem;
-        cursor: pointer;
-        transition: transform 0.2s;
-        &:hover { transform: scale(1.1); }
+        margin-top: 0.5rem;
       }
     }
-  }
-
-  @media (max-width: 480px) {
-    .cert-card { flex-direction: column; text-align: center; align-items: center; }
   }
 }

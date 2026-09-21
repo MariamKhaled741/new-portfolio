@@ -1,45 +1,27 @@
-<div class="activities-container">
-  
-  <div class="activities-header">
-    <h2>Extracurricular <span class="highlight">Activities</span></h2>
-    <p class="activities-subtitle">Leadership and voluntary roles within the university community</p>
+<section class="extracurricular-section">
+  <h2>الأنشطة الطلابية والتطوعية (Extracurricular Activities)</h2>
+
+  <div *ngIf="isLoading" class="loading">جاري تحميل الأنشطة...</div>
+
+  <div *ngIf="errorMessage && !isLoading" class="error-msg">
+    {{ errorMessage }}
   </div>
 
-  <div class="activities-grid">
-    
-    <!-- 1. كارت حفل التخرج -->
-    <div class="activity-card">
-      <div class="activity-icon-box">
-        <i class="fa-solid fa-graduation-cap"></i>
-      </div>
-      <div class="activity-info">
-        <div class="activity-meta">
-          <h3>3rd Batch Graduation Ceremony Organization</h3>
-          <span class="activity-date">2025</span>
-        </div>
-        <h4>Faculty of Computers and Data Science, Alexandria University</h4>
-        <p class="activity-desc">
-          Actively participated in organizing and managing the graduation ceremony for the 3rd batch, ensuring smooth operations and event coordination.
-        </p>
-      </div>
-    </div>
-
-    <!-- 2. كارت HackerRank -->
-    <div class="activity-card">
-      <div class="activity-icon-box">
-        <i class="fa-solid fa-code-branch"></i>
-      </div>
-      <div class="activity-info">
-        <div class="activity-meta">
-          <h3>HackerRank Student Family Member</h3>
-          <span class="activity-date">2024</span>
-        </div>
-        <h4>Faculty of Computers and Data Science, Alexandria University</h4>
-        <p class="activity-desc">
-          Volunteered as a community member to help foster a competitive programming culture among students, assisting in tech community engagement.
-        </p>
-      </div>
-    </div>
-
+  <div *ngIf="!isLoading && !errorMessage && activities.length === 0">
+    لا توجد أنشطة مسجلة حالياً.
   </div>
-</div>
+
+  <div *ngIf="!isLoading && activities.length > 0" class="activities-list">
+    <div *ngFor="let item of activities" class="activity-card">
+      <div class="activity-icon">🌟</div>
+      <div class="activity-info">
+        <h3>{{ item.title }}</h3>
+        <p class="org"><strong>الجهة:</strong> {{ item.organization }} <span *ngIf="item.role">({{ item.role }})</span></p>
+        <p *ngIf="item.description" class="desc">{{ item.description }}</p>
+        <div class="dates" *ngIf="item.startDate">
+          <small>{{ item.startDate | date:'mediumDate' }} - {{ item.endDate ? (item.endDate | date:'mediumDate') : 'حتى الآن' }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

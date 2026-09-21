@@ -31,11 +31,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// 1. تفعيل تحويل HTTPS
 app.UseHttpsRedirection();
 
-// Use CORS Policy
+// 2. تفعيل الملفات الثابتة (wwwroot/uploads)
+app.UseStaticFiles();
+
+// 3. تفعيل سياسة CORS
 app.UseCors("AllowAngular");
 
+// 4. التوثيق والتحكم
 app.UseAuthorization();
 
 app.MapControllers();

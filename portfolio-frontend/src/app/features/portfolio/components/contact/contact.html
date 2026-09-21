@@ -1,75 +1,51 @@
-<div class="contact-container">
-  
-  <div class="contact-header">
-    <h2>Get In <span class="highlight">Touch</span></h2>
-    <p class="contact-subtitle">Let's collaborate! Drop me a message or reach out through my socials.</p>
-  </div>
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <p class="subtitle">هل لديك استفسار أو مشروع تريد مناقشته؟ ارسل لي رسالة!</p>
 
-  <div class="contact-content">
-    
-    <!-- الجهة اليسرى: معلومات التواصل والسوشيال ميديا -->
-    <div class="contact-info-panel">
-      <h3>Contact Information</h3>
-      <p class="panel-desc">Feel free to connect. I am open to freelance projects, collaboration, or technical discussions.</p>
-      
-      <div class="info-links">
-        <!-- الإيميل -->
-        <a href="mailto:mariam.khaled@example.com" class="info-item">
-          <div class="icon-box email-icon"><i class="fa-solid fa-envelope"></i></div>
-          <div class="info-text">
-            <span>Email Me</span>
-            <strong>mariam.khaled@example.com</strong>
-          </div>
-        </a>
-
-        <!-- رقم التليفون -->
-        <a href="tel:+201000000000" class="info-item">
-          <div class="icon-box phone-icon"><i class="fa-solid fa-phone"></i></div>
-          <div class="info-text">
-            <span>Call Me</span>
-            <strong>+20 100 000 0000</strong>
-          </div>
-        </a>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+      <!-- Name Field -->
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input id="name" type="text" formControlName="name" placeholder="Your Name" />
+        <span class="error-text" *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid">
+          الرجاء إدخال الاسم (حرفين على الأقل).
+        </span>
       </div>
 
-      <div class="social-links-wrapper">
-        <h4>Follow & Connect</h4>
-        <div class="social-buttons">
-          <!-- LinkedIn -->
-          <a href="https://linkedin.com/in/mariam-khaled" target="_blank" aria-label="LinkedIn" class="social-btn linkedin">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <!-- GitHub -->
-          <a href="https://github.com/mariam-khaled" target="_blank" aria-label="GitHub" class="social-btn github">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </div>
+      <!-- Email Field -->
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input id="email" type="email" formControlName="email" placeholder="Your Email" />
+        <span class="error-text" *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid">
+          الرجاء إدخال بريد إلكتروني صحيح.
+        </span>
       </div>
-    </div>
 
-    <!-- الجهة اليمنى: فورم التواصل السريع -->
-    <div class="contact-form-panel">
-<form (ngSubmit)="onSubmit()">
-          <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" required placeholder="Mariam Khaled">
-        </div>
+      <!-- Subject Field -->
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input id="subject" type="text" formControlName="subject" placeholder="Subject (Optional)" />
+      </div>
 
-        <div class="form-group">
-          <label for="email">Your Email</label>
-          <input type="email" id="email" required placeholder="name@example.com">
-        </div>
+      <!-- Message Field -->
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" rows="5" formControlName="message" placeholder="Write your message here..."></textarea>
+        <span class="error-text" *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid">
+          الرجاء كتابة رسالة تحتوي على 10 أحرف على الأقل.
+        </span>
+      </div>
 
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" rows="5" required placeholder="Hi Mariam, I would love to talk about..."></textarea>
-        </div>
+      <!-- Feedback Messages -->
+      <div class="alert alert-success" *ngIf="successMessage">{{ successMessage }}</div>
+      <div class="alert alert-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
 
-        <button type="submit" class="submit-btn">
-          Send Message <i class="fa-regular fa-paper-plane"></i>
-        </button>
-      </form>
-    </div>
-
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="isSubmitting" class="submit-btn">
+        <span *ngIf="!isSubmitting">Send Message</span>
+        <span *ngIf="isSubmitting">Sending...</span>
+      </button>
+    </form>
   </div>
-</div>
+</section>

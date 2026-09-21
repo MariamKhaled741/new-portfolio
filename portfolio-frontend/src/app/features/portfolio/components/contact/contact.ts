@@ -1,45 +1,56 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../../../../core/services/contact.service';
-import { ContactMessage } from '../../../../core/models/portfolio.models';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './contact.html',
-  styleUrl: './contact.scss'
+  styleUrls: ['./contact.scss']
 })
 export class ContactComponent {
-  messageData: ContactMessage = {
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  };
-
+  contactForm: FormGroup;
   isSubmitting = false;
+  successMessage = '';
+  errorMessage = '';
 
-  constructor(private contactService: ContactService) {}
+  constructor(
+    private fb: FormBuilder,
+    private contactService: ContactService,
+    private cdr: ChangeDetectorRef
+  ) {
+    this.contactForm = this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(2)]],
+      email: ['', [Validators.required, Validators.email]],
+      subject: [''],
+      message: ['', [Validators.required, Validators.minLength(10)]]
+    });
+  }
 
   onSubmit(): void {
-    if (!this.messageData.name || !this.messageData.email || !this.messageData.message) {
-      alert('يرجى ملء جميع الحقول المطلوب');
+    if (this.contactForm.invalid) {
+      this.contactForm.markAllAsTouched();
       return;
     }
 
     this.isSubmitting = true;
-    this.contactService.sendMessage(this.messageData).subscribe({
+    this.successMessage = '';
+    this.errorMessage = '';
+
+    this.contactService.sendMessage(this.contactForm.value).subscribe({
       next: () => {
-        alert('شكراً لك! تم إرسال رسالتك بنجاح.');
-        this.messageData = { name: '', email: '', subject: '', message: '' };
         this.isSubmitting = false;
+        this.successMessage = 'تم إرسال رسالتك بنجاح! سأتواصل معك قريباً.';
+        this.contactForm.reset();
+        this.cdr.detectChanges();
       },
       error: (err) => {
-        console.error('Error sending message:', err);
-        alert('حدث خطأ أثناء الإرسال. حاول مرة أخرى.');
+        console.error('Contact Form Error:', err);
         this.isSubmitting = false;
+        this.errorMessage = 'حدث خطأ أثناء إرسال الرسالة، يرجى المحاولة لاحقاً.';
+        this.cdr.detectChanges();
       }
     });
   }

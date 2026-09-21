@@ -1,99 +1,51 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using portfolio_backend.Models;
-using portfolio_backend.Data;
 
-[Route("api/[controller]")]
-[ApiController]
-public class ProjectsController : ControllerBase
+namespace portfolio_backend.Controllers
 {
-    private readonly AppDbContext _context;
-    public ProjectsController(AppDbContext context)
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ProjectsController : ControllerBase
     {
-        _context = context;
-    }
-
-    // GET: api/Project
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Project>>> GetProject()
-    {
-        return await _context.Projects.ToListAsync();
-    }
-
-    // GET: api/Project/5
-    [HttpGet("{id}")]
-    public async Task<ActionResult<Project>> GetProject(int id)
-    {
-        var project = await _context.Projects.FindAsync(id);
-
-        if (project == null)
+        [HttpGet]
+        public IActionResult GetProjects()
         {
-            return NotFound();
-        }
-
-        return project;
-    }
-
-    // PUT: api/Project/5
-    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-    [HttpPut("{id}")]
-    public async Task<IActionResult> PutProject(int? id, Project project)
-    {
-        if (id != project.Id)
-        {
-            return BadRequest();
-        }
-
-        _context.Entry(project).State = EntityState.Modified;
-
-        try
-        {
-            await _context.SaveChangesAsync();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            if (!ProjectExists(id))
+            var projects = new List<Project>
             {
-                return NotFound();
-            }
-            else
-            {
-                throw;
-            }
+                new Project
+                {
+                    Id = 1,
+                    Title = "Personal Portfolio Website",
+                    Description = "A full-stack interactive portfolio website built with .NET 8 Web API and Angular.",
+                    ImageUrl = "https://localhost:7001/uploads/profile.jpg",
+                    DateCompleted = "Jan 2026",
+                    GithubUrl = "https://github.com/MariamKhaled741",
+                    LinkedinUrl = "https://www.linkedin.com/in/mariam-khaled-711962312",
+                    Technologies = ".NET 8, Angular, SCSS, SQL Server",
+                    IsFeatured = true
+                }
+            };
+
+            return Ok(projects);
         }
 
-        return NoContent();
-    }
-
-    // POST: api/Project
-    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-    [HttpPost]
-    public async Task<ActionResult<Project>> PostProject(Project project)
-    {
-        _context.Projects.Add(project);
-        await _context.SaveChangesAsync();
-
-        return CreatedAtAction("GetProject", new { id = project.Id }, project);
-    }
-
-    // DELETE: api/Project/5
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteProject(int? id)
-    {
-        var project = await _context.Projects.FindAsync(id);
-        if (project == null)
+        [HttpGet("{id}")]
+        public IActionResult GetProject(int id)
         {
-            return NotFound();
+            var project = new Project
+            {
+                Id = 1,
+                Title = "Personal Portfolio Website",
+                Description = "A full-stack interactive portfolio website built with .NET 8 Web API and Angular.",
+                ImageUrl = "https://localhost:7001/uploads/profile.jpg",
+                DateCompleted = "Jan 2026",
+                GithubUrl = "https://github.com/MariamKhaled741",
+                LinkedinUrl = "https://www.linkedin.com/in/mariam-khaled-711962312",
+                Technologies = ".NET 8, Angular, SCSS, SQL Server",
+                IsFeatured = true
+            };
+
+            return Ok(project);
         }
-
-        _context.Projects.Remove(project);
-        await _context.SaveChangesAsync();
-
-        return NoContent();
-    }
-
-    private bool ProjectExists(int? id)
-    {
-        return _context.Projects.Any(e => e.Id == id);
     }
 }

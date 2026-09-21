@@ -1,58 +1,38 @@
-<div class="projects-container">
-  
-  <div class="projects-header">
-    <h2>My <span class="highlight">Projects</span></h2>
-    <p class="projects-subtitle">Explore my recent work spanning Web Development, Data Science, and Systems Engineering</p>
-  </div>
+<section id="projects" class="projects-section">
+  <h2 class="section-title">My Projects</h2>
 
-  <!-- أزرار الفلاتر -->
-  <div class="filter-buttons">
-    <button 
-      *ngFor="let filter of filters" 
-      class="filter-btn" 
-      [class.active]="activeFilter === filter"
-      (click)="setFilter(filter)">
-      {{ filter }}
-    </button>
-  </div>
-
-  <!-- شبكة المشاريع -->
   <div class="projects-grid">
-    <div class="project-card" *ngFor="let project of filteredProjects">
-      <div class="project-image">
-        <!-- استخدام الصورة إن وجدت، أو Placeholder -->
-        <img *ngIf="project.image" [src]="project.image" [alt]="project.title" style="width: 100%; height: 100%; object-fit: cover;">
-        <div *ngIf="!project.image" class="image-placeholder">
-          <i class="fa-solid fa-code"></i>
-        </div>
-      </div>
+    <div class="project-card" *ngFor="let project of projects">
       
+      <!-- 🖼️ صورة المشروع + التاريخ -->
+      <div class="project-image">
+        <img [src]="project.imageUrl" [alt]="project.title" />
+        <span class="project-date" *ngIf="project.dateCompleted">{{ project.dateCompleted }}</span>
+      </div>
+
+      <!-- 📝 تفاصيل المشروع -->
       <div class="project-info">
         <h3>{{ project.title }}</h3>
-        <p class="project-desc">{{ project.description }}</p>
-        
-        <div class="tech-stack">
-          <span class="tech-tag" *ngFor="let tech of project.techStack">{{ tech }}</span>
+        <p>{{ project.description }}</p>
+
+        <!-- 🏷️ التقنيات المستخدمة -->
+        <div class="tech-stack" *ngIf="project.technologies">
+          <span class="tech-tag" *ngFor="let tech of project.technologies.split(',')">
+            {{ tech.trim() }}
+          </span>
         </div>
-        
+
+        <!-- 🔗 الروابط (GitHub & LinkedIn) -->
         <div class="project-links">
-          <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank" class="btn-link btn-github">
-            <i class="fa-brands fa-github"></i> GitHub
+          <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank" class="btn-link">
+            GitHub
           </a>
-          <a *ngIf="project.demoUrl" [href]="project.demoUrl" target="_blank" class="btn-link btn-demo">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+          <a *ngIf="project.linkedinUrl" [href]="project.linkedinUrl" target="_blank" class="btn-link">
+            LinkedIn
           </a>
         </div>
       </div>
+
     </div>
   </div>
-
-  <!-- زرار Show More يظهر فقط إذا كان عدد المشاريع في الفلتر الحالي أكبر من 6 -->
-  <div class="show-more-wrapper" *ngIf="hasMoreProjects">
-    <button class="show-more-btn" (click)="toggleShowMore()">
-      {{ showAll ? 'Show Less' : 'Show All Projects' }}
-      <i class="fa-solid" [class.fa-chevron-down]="!showAll" [class.fa-chevron-up]="showAll"></i>
-    </button>
-  </div>
-
-</div>
+</section>
