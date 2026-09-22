@@ -1,13 +1,17 @@
+$purple-primary: #6366f1;
+$purple-dark: #4f46e5;
+$purple-light: #e0e7ff;
+$text-dark: #1f2937;
+$text-gray: #4b5563;
+$text-light-gray: #6b7280;
+
 .hero-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: auto; // شلنا الـ calc القديمة عشان ميعملش فراغات إضافية
-  padding: 30px 8% 60px 8%; // قللنا الـ padding اللي فوق
-  margin-top: 0; // يلزق مباشرة تحت الناف بار
+  padding: 40px 8% 60px 8%;
   gap: 60px;
   background-color: #faf8f5;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
 
   @media (max-width: 992px) {
@@ -18,8 +22,6 @@
   }
 }
 
-
-// تنسيق الجانب الأيسر (الكلام والزرار)
 .hero-left {
   flex: 1.2;
   display: flex;
@@ -28,13 +30,13 @@
 
   .hero-title {
     font-size: 2.8rem;
-    color: #1f2937;
+    color: $text-dark;
     margin-bottom: 10px;
     font-weight: 700;
     line-height: 1.2;
 
     .highlight {
-      color: #6366f1; /* موف / إنديغو متناسق مع الناف بار */
+      color: $purple-primary;
     }
 
     @media (max-width: 576px) {
@@ -44,7 +46,7 @@
 
   .hero-subtitle {
     font-size: 1.6rem;
-    color: #4b5563;
+    color: $text-gray;
     font-weight: 500;
     margin-bottom: 25px;
 
@@ -55,10 +57,9 @@
 
   .hero-bio {
     font-size: 1.05rem;
-    color: #6b7280;
+    color: $text-light-gray;
     line-height: 1.7;
     margin-bottom: 35px;
-    text-align: justify;
 
     @media (max-width: 992px) {
       text-align: center;
@@ -66,8 +67,11 @@
   }
 
   .hero-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+
     @media (max-width: 992px) {
-      display: flex;
       justify-content: center;
     }
     
@@ -75,8 +79,8 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background-color: #6366f1; /* زرار موف */
-      color: white;
+      background-color: $purple-primary;
+      color: #ffffff;
       padding: 14px 28px;
       border-radius: 30px;
       font-weight: 600;
@@ -87,19 +91,48 @@
       cursor: pointer;
 
       &:hover {
-        background-color: #4f46e5;
+        background-color: $purple-dark;
         transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
       }
 
-      &:active {
-        transform: translateY(0);
+      &.btn-secondary {
+        background-color: transparent;
+        color: $purple-primary;
+        border: 2px solid $purple-primary;
+        box-shadow: none;
+
+        &:hover {
+          background-color: $purple-primary;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+
+    @media (max-width: 992px) {
+      justify-content: center;
+    }
+
+    a {
+      color: $purple-primary;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $purple-dark;
+        text-decoration: underline;
       }
     }
   }
 }
 
-// تنسيق الجانب الأيمن (المربع والفقعات)
 .hero-right {
   flex: 0.8;
   display: flex;
@@ -119,28 +152,20 @@
     }
   }
 
-  // المربع المخصص للصورة بحواف دائرية واحترافية
   .image-placeholder {
     width: 100%;
     height: 100%;
-    background-color: #e0e7ff; /* خلفية ناعمة مريحة للعين */
-    border: 3px solid #6366f1;
-    border-radius: 40px; /* حواف مدورة ومميزة كما طلبتِ */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    color: #4f46e5;
-    font-weight: 500;
-    overflow: hidden; /* عشان الصورة لما تتحط متطلعش برة الحواف */
+    background-color: $purple-light;
+    border: 3px solid $purple-primary;
+    border-radius: 40px;
+    overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
     transition: all 0.5s ease;
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* عشان الصورة متتمطش وتملى المربع بشكل مثالي */
+      object-fit: cover;
     }
 
     &:hover {
@@ -148,7 +173,6 @@
     }
   }
 
-  // تنسيق الفقعات الطائرة (Bubbles)
   .bubble {
     position: absolute;
     background: rgba(255, 255, 255, 0.9);
@@ -158,42 +182,19 @@
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
-    color: #4f46e5;
+    color: $purple-dark;
     box-shadow: 0 10px 25px rgba(99, 102, 241, 0.15);
     z-index: 10;
     white-space: nowrap;
     animation: float 4s ease-in-out infinite;
   }
 
-  // توزيع أماكن الفقعات حول المربع
-  .bubble-1 {
-    top: 20px;
-    left: -40px;
-    animation-delay: 0s;
-  }
-
-  .bubble-2 {
-    top: 50%;
-    right: -50px;
-    animation-delay: 1.3s;
-  }
-
-  .bubble-3 {
-    bottom: 30px;
-    left: -20px;
-    animation-delay: 2.5s;
-  }
+  .bubble-1 { top: 20px; left: -40px; animation-delay: 0s; }
+  .bubble-2 { top: 50%; right: -50px; animation-delay: 1.3s; }
+  .bubble-3 { bottom: 30px; left: -20px; animation-delay: 2.5s; }
 }
 
-// تأثير الطفو والتحرك المستمر للفقعات
 @keyframes float {
-  0% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-12px) rotate(1.5deg);
-  }
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1.5deg); }
 }

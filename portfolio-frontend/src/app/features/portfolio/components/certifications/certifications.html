@@ -1,29 +1,28 @@
-<section class="certifications-section">
-  <h2>الشهادات (Certifications)</h2>
+<section id="certifications" class="certifications-section">
+  <div class="certifications-container">
+    <div class="certifications-header">
+      <h2>Certifications & <span class="highlight">Licenses</span></h2>
+      <p class="certifications-subtitle">الشهادات المهنية والدورات المعتمَدة</p>
+    </div>
 
-  <div *ngIf="isLoading" class="loading">جاري تحميل الشهادات...</div>
+    <div class="certifications-grid">
+      <div class="cert-card" *ngFor="let cert of certifications">
+        <div class="cert-image" *ngIf="cert.imageUrl">
+          <img [src]="cert.imageUrl" [alt]="cert.title" />
+        </div>
+        <div class="cert-icon" *ngIf="!cert.imageUrl">📜</div>
 
-  <div *ngIf="errorMessage && !isLoading" class="error-msg">
-    {{ errorMessage }}
-  </div>
+        <div class="cert-content">
+          <span class="cert-date" *ngIf="cert.issueDate">{{ cert.issueDate }}</span>
+          <h3>{{ cert.title }}</h3>
+          <h4>{{ cert.issuer }}</h4>
+          
+          <p class="cert-summary" *ngIf="cert.summary">{{ cert.summary }}</p>
 
-  <div *ngIf="!isLoading && !errorMessage && certifications.length === 0">
-    لا توجد شهادات متاحة حالياً.
-  </div>
-
-  <div *ngIf="!isLoading && certifications.length > 0" class="certs-grid">
-    <div *ngFor="let cert of certifications" class="cert-card">
-      <div class="cert-icon">
-        🎓
-      </div>
-      <div class="cert-details">
-        <h3>{{ cert.title }}</h3>
-        <p><strong>الجهة:</strong> {{ cert.issuer }}</p>
-
-        <!-- في حال كانت هناك صورة حقيقية نعرضها، وإلا نعرض أيقونة جذابة -->
-        <img *ngIf="cert.imageUrl && !cert.imageUrl.includes('placeholder')" [src]="cert.imageUrl" [alt]="cert.title" />
-
-        <small><strong>التاريخ:</strong> {{ cert.issueDate | date:'mediumDate' }}</small>
+          <a *ngIf="cert.linkedinUrl" [href]="cert.linkedinUrl" target="_blank" class="btn-link">
+            View Certificate ↗
+          </a>
+        </div>
       </div>
     </div>
   </div>

@@ -1,5 +1,8 @@
-<section class="trainings-section">
-  <h2>الدورات التدريبية (Trainings)</h2>
+<section id="trainings" class="trainings-container">
+  <div class="trainings-header">
+    <h2>My <span class="highlight">Trainings</span></h2>
+    <p class="trainings-subtitle">Courses and training programs I have completed</p>
+  </div>
 
   <div *ngIf="isLoading" class="loading">جاري تحميل البيانات...</div>
 
@@ -13,15 +16,20 @@
 
   <div *ngIf="!isLoading && trainings.length > 0" class="trainings-list">
     <div *ngFor="let item of trainings" class="training-card">
-      <div class="training-icon">🎯</div>
-      <div class="training-info">
-        <h3>{{ item.title }}</h3>
-        <p class="provider"><strong>الجهة:</strong> {{ item.provider }}</p>
-        <p *ngIf="item.description" class="desc">{{ item.description }}</p>
-        <div class="dates" *ngIf="item.startDate">
-          <small>{{ item.startDate | date:'mediumDate' }} - {{ item.endDate ? (item.endDate | date:'mediumDate') : 'مستمر' }}</small>
+      
+
+      <div class="card-content">
+        <div class="card-meta">
+          <h3>{{ item.title }}</h3>
+          <div class="training-date" *ngIf="item.startDate">
+            {{ item.startDate | date:'mediumDate' }} - {{ item.endDate ? (item.endDate | date:'mediumDate') : 'مستمر' }}
+          </div>
         </div>
+
+        <h4>{{ item.provider }}</h4>
+        <p *ngIf="item.description" class="training-desc">{{ item.description }}</p>
       </div>
+
     </div>
   </div>
 </section>

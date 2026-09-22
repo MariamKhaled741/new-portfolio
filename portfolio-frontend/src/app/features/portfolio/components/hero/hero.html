@@ -1,28 +1,39 @@
-<section class="hero-section" *ngIf="profile">
-  <div class="hero-content">
-    <h1>مرحباً، أنا {{ profile.fullName }}</h1>
-    <h2>{{ profile.title }}</h2>
-    <p class="bio">{{ profile.bio }}</p>
+<section class="hero-container" *ngIf="profile">
+  <!-- الجانب الأيسر: النصوص والأزرار -->
+  <div class="hero-left">
+    <h1 class="hero-title">Hi! I'm <span class="highlight">{{ profile.fullName }}</span></h1>
+    <h2 class="hero-subtitle">{{ profile.title }}</h2>
+    <p class="hero-bio">{{ profile.bio }}</p>
 
-    <div class="hero-buttons">
+    <div class="hero-actions">
       <!-- زر تحميل الـ CV -->
-      <a *ngIf="profile.cvUrl" [href]="profile.cvUrl" target="_blank" class="btn btn-primary" download>
-        تحميل الـ CV 📄
+      <a *ngIf="profile.cvUrl" [href]="profile.cvUrl" target="_blank" class="btn-download" download>
+       Download CV 
       </a>
       
       <!-- زر التواصل -->
-      <a href="#contact" class="btn btn-secondary">تواصل معي ✉️</a>
+      <a href="#contact" class="btn-download btn-secondary">Contact Me</a>
     </div>
 
     <!-- روابط التواصل الاجتماعي -->
-    <div class="social-links">
+    <div class="social-links" *ngIf="profile.githubUrl || profile.linkedinUrl">
       <a *ngIf="profile.githubUrl" [href]="profile.githubUrl" target="_blank">GitHub</a>
       <a *ngIf="profile.linkedinUrl" [href]="profile.linkedinUrl" target="_blank">LinkedIn</a>
     </div>
   </div>
 
-  <!-- صورة الملف الشخصي -->
-  <div class="hero-image" *ngIf="profile.imageUrl">
-    <img [src]="profile.imageUrl" [alt]="profile.fullName">
+  <!-- الجانب الأيمن: الصورة والـ Bubbles -->
+  <div class="hero-right">
+    <div class="image-wrapper">
+      <div class="image-placeholder">
+        <img *ngIf="profile.imageUrl" [src]="profile.imageUrl" [alt]="profile.fullName">
+      </div>
+      
+      <!-- الفقاعات الديكورية -->
+      <div class="bubble bubble-1">Frontend </div>
+      <div class="bubble bubble-2">Backend </div>
+      <div class="bubble bubble-3">Data Science </div>
+      
+    </div>
   </div>
 </section>

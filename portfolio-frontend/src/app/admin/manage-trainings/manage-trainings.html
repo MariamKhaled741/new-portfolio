@@ -1,0 +1,82 @@
+<div class="manage-trainings-container">
+  <div class="header">
+    <h2>Manage <span class="highlight">Trainings</span></h2>
+    <button class="btn-primary" (click)="toggleForm()">
+      {{ showForm ? 'Close Form' : '+ Add New Training' }}
+    </button>
+  </div>
+
+  <!-- Training Form (Add/Edit) -->
+  <div class="form-card" *ngIf="showForm">
+    <h3>{{ isEditing ? 'Edit Training' : 'Add New Training' }}</h3>
+    
+    <form (ngSubmit)="saveTraining()">
+      <div class="form-group">
+        <label>Course / Program Title *</label>
+        <input type="text" [(ngModel)]="currentTraining.title" name="title" required placeholder="e.g. Angular Web Development Bootcamp" />
+      </div>
+
+      <div class="form-group">
+        <label>Provider / Organization *</label>
+        <input type="text" [(ngModel)]="currentTraining.provider" name="provider" required placeholder="e.g. Udacity, Coursera, DEPI" />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Start Date</label>
+          <input type="date" [(ngModel)]="currentTraining.startDate" name="startDate" />
+        </div>
+
+        <div class="form-group">
+          <label>End Date</label>
+          <input type="date" [(ngModel)]="currentTraining.endDate" name="endDate" placeholder="Leave empty if ongoing" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <textarea [(ngModel)]="currentTraining.description" name="description" rows="3" placeholder="Brief details about topics covered, certificates earned, etc..."></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-save">{{ isEditing ? 'Update Training' : 'Save Training' }}</button>
+        <button type="button" class="btn-cancel" (click)="resetForm()">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Trainings List Table -->
+  <div class="table-card">
+    <table class="trainings-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Provider</th>
+          <th>Duration</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of trainings; let i = index">
+          <td class="title-cell">
+            <strong>{{ item.title }}</strong>
+          </td>
+          <td>{{ item.provider }}</td>
+          <td>
+            <span *ngIf="item.startDate">
+              {{ item.startDate | date:'shortDate' }} - {{ item.endDate ? (item.endDate | date:'shortDate') : 'Present' }}
+            </span>
+            <span *ngIf="!item.startDate">N/A</span>
+          </td>
+          <td class="actions-cell">
+            <button class="btn-edit" (click)="editTraining(item)">Edit ✏️</button>
+           <button class="btn-delete" (click)="deleteTraining(item.id)">Delete 🗑️</button>
+          </td>
+        </tr>
+        <tr *ngIf="trainings.length === 0">
+          <td colspan="4" class="no-data">No training programs added yet. Click "+ Add New Training" to get started!</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

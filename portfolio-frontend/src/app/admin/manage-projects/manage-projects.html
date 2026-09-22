@@ -1,0 +1,81 @@
+<div class="manage-projects-container">
+  <div class="header">
+    <h2>Manage <span class="highlight">Projects</span></h2>
+    <button class="btn-primary" (click)="toggleForm()">
+      {{ showForm ? 'Close Form' : '+ Add New Project' }}
+    </button>
+  </div>
+
+  <!-- Project Form (Add/Edit) -->
+  <div class="form-card" *ngIf="showForm">
+    <h3>{{ isEditing ? 'Edit Project' : 'Add New Project' }}</h3>
+    
+    <form (ngSubmit)="saveProject()">
+      <div class="form-group">
+        <label>Project Title *</label>
+        <input type="text" [(ngModel)]="currentProject.title" name="title" required placeholder="e.g. E-Commerce Web App" />
+      </div>
+
+      <div class="form-group">
+        <label>Description *</label>
+        <textarea [(ngModel)]="currentProject.description" name="description" rows="4" required placeholder="Write a brief overview of the project..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Technologies (comma separated)</label>
+        <input type="text" [(ngModel)]="currentProject.technologies" name="technologies" placeholder="Angular, TypeScript, SCSS, Node.js" />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Image URL</label>
+          <input type="text" [(ngModel)]="currentProject.imageUrl" name="imageUrl" placeholder="https://example.com/image.jpg" />
+        </div>
+
+        <div class="form-group">
+          <label>GitHub URL</label>
+          <input type="text" [(ngModel)]="currentProject.githubUrl" name="githubUrl" placeholder="https://github.com/your-username/repo" />
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-save">{{ isEditing ? 'Update Project' : 'Save Project' }}</button>
+        <button type="button" class="btn-cancel" (click)="resetForm()">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Projects List Table -->
+  <div class="table-card">
+    <table class="projects-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Technologies</th>
+          <th>GitHub Link</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let project of projects; let i = index">
+          <td class="title-cell">
+            <strong>{{ project.title }}</strong>
+          </td>
+          <td>{{ project.technologies || 'N/A' }}</td>
+          <td>
+            <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank" class="link">View Repo</a>
+            <span *ngIf="!project.githubUrl">-</span>
+          </td>
+          <td class="actions-cell">
+            <button class="btn-edit" (click)="editProject(project)">Edit ✏️</button>
+            <button class="btn-delete" (click)="deleteProject(project.id)">Delete 🗑️</button>
+
+          </td>
+        </tr>
+        <tr *ngIf="projects.length === 0">
+          <td colspan="4" class="no-data">No projects added yet. Click "+ Add New Project" to get started!</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

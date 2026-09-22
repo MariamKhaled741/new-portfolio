@@ -1,0 +1,166 @@
+$purple-primary: #6366f1;
+$purple-dark: #4f46e5;
+$bg-light: #f8fafc;
+$text-dark: #0f172a;
+
+.manage-trainings-container {
+  direction: ltr;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+
+    h2 {
+      font-size: 1.8rem;
+      color: $text-dark;
+
+      .highlight {
+        color: $purple-primary;
+      }
+    }
+
+    .btn-primary {
+      background-color: $purple-primary;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &:hover {
+        background-color: $purple-dark;
+      }
+    }
+  }
+
+  .form-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+
+    h3 {
+      margin-bottom: 20px;
+      color: $text-dark;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+
+      label {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #475569;
+      }
+
+      input, textarea {
+        padding: 10px 14px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        outline: none;
+
+        &:focus {
+          border-color: $purple-primary;
+        }
+      }
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+
+      button {
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+      }
+
+      .btn-save {
+        background-color: $purple-primary;
+        color: #fff;
+      }
+
+      .btn-cancel {
+        background-color: #f1f5f9;
+        color: #475569;
+      }
+    }
+  }
+
+  .table-card {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+
+    .trainings-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+
+      th {
+        background-color: #f8fafc;
+        padding: 14px 20px;
+        color: #475569;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      td {
+        padding: 16px 20px;
+        border-bottom: 1px solid #e2e8f0;
+        color: #334155;
+      }
+
+      .no-data {
+        text-align: center;
+        color: #94a3b8;
+        padding: 30px;
+      }
+
+      .actions-cell {
+        display: flex;
+        gap: 8px;
+
+        button {
+          padding: 6px 12px;
+          border-radius: 6px;
+          border: none;
+          font-weight: 600;
+          font-size: 0.85rem;
+          cursor: pointer;
+        }
+
+        .btn-edit {
+          background-color: #eff6ff;
+          color: #2563eb;
+        }
+
+        .btn-delete {
+          background-color: #fef2f2;
+          color: #dc2626;
+        }
+      }
+    }
+  }
+}

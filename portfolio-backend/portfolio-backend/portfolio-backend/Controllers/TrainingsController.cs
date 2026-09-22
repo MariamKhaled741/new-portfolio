@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using portfolio_backend.Data;
 using portfolio_backend.Models;
 
 namespace portfolio_backend.Controllers
@@ -7,32 +9,94 @@ namespace portfolio_backend.Controllers
     [ApiController]
     public class TrainingsController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult GetTrainings()
-        {
-            var trainings = new List<Training>
-    {
-        new Training
-        {
-            Id = 1,
-            Title = "Machine Learning Internship",
-            Provider = "National Telecommunication Institute (NTI)",
-            Description = "Joined NTI as a Machine Learning Trainee, focusing on gaining new skills, working on practical projects, and deepening knowledge in the field of Machine Learning.",
-            StartDate = new DateTime(2025, 8, 1),
-            EndDate = new DateTime(2025, 9, 30)
-        },
-        new Training
-        {
-            Id = 2,
-            Title = "Full Stack ASP.NET Backend Development Trainee",
-            Provider = "DEPI (Digital Egypt Pioneers Initiative)",
-            Description = "Joined the Rowad Misr initiative for an intensive professional training program focused on full-stack development. Developed technical expertise in ASP.NET Core backend architectures while integrating technical excellence (Prompt Engineering), professional skills (Soft Skills, Freelancing, Coaching), and Business English proficiency for technical documentation.",
-            StartDate = new DateTime(2025, 11, 28),
-            EndDate = new DateTime(2026, 7, 31)
-        }
-    };
+        private readonly AppDbContext _context;
 
+        public TrainingsController(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        // 1️⃣ GET: api/Trainings (عرض كل التدريبات من SQL)
+        [HttpGet]
+        public async Task<IActionResult> GetTrainings()
+        {
+            var trainings = await _context.Trainings.ToListAsync();
             return Ok(trainings);
+        }
+
+        // 2️⃣ GET: api/Trainings/5 (عرض تدريب معين حسب ID)
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetTraining(int id)
+        {
+            var training = await _context.Trainings.FindAsync(id);
+            if (training == null)
+            {
+                return NotFound();
+            }
+            return Ok(training);
+        }
+
+        // 3️⃣ POST: api/Trainings (إضافة تدريب جديد إلى SQL)
+        [HttpPost]
+        public async Task<IActionResult> PostTraining([FromBody] Training training)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            _context.Trainings.Add(training);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetTraining), new { id = training.Id }, training);
+        }
+
+        // 4️⃣ PUT: api/Trainings/5 (تعديل بيانات تدريب)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutTraining(int id, [FromBody] Training training)
+        {
+            if (id != training.Id)
+            {
+                return BadRequest("Training ID mismatch");
+            }
+
+            _context.Entry(training).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!TrainingExists(id))
+                {
+                    return NotFound();
+                }
+                throw;
+            }
+
+            return NoContent();
+        }
+
+        // 5️⃣ DELETE: api/Trainings/5 (حذف تدريب من SQL)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteTraining(int id)
+        {
+            var training = await _context.Trainings.FindAsync(id);
+            if (training == null)
+            {
+                return NotFound();
+            }
+
+            _context.Trainings.Remove(training);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        private bool TrainingExists(int id)
+        {
+            return _context.Trainings.Any(e => e.Id == id);
         }
     }
 }

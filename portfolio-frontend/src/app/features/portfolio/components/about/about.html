@@ -1,28 +1,29 @@
-<section id="certifications" class="certifications-section">
-  <h2 class="section-title">Certifications</h2>
+<section id="about" class="about-container">
+  <div class="about-header">
+    <h2>About & <span class="highlight">Education</span></h2>
+    
+  </div>
 
-  <div class="certifications-grid">
-    <div class="cert-card" *ngFor="let cert of certifications">
+  <!-- كروت التعليم من الباك إند -->
+  <div class="education-grid" *ngIf="educationList.length > 0">
+    <div class="education-card" *ngFor="let edu of educationList">
+      <div class="edu-icon">🎓</div>
       
-      <!-- 🖼️ صورة الشهادة -->
-      <div class="cert-image" *ngIf="cert.imageUrl">
-        <img [src]="cert.imageUrl" [alt]="cert.title" />
+      <div class="edu-details">
+        <h3>{{ edu.degree }}</h3>
+        <h4>{{ edu.university }}</h4>
+        <span class="edu-date">{{ edu.duration }} | {{ edu.location }}</span>
+
+        <!-- قائمة المواد الدراسية -->
+        <div class="courses-section" *ngIf="edu.courses && edu.courses.length > 0">
+          <h5>Key Coursework:</h5>
+          <div class="courses-grid">
+            <span class="course-tag" *ngFor="let course of edu.courses">
+              {{ course }}
+            </span>
+          </div>
+        </div>
       </div>
-
-      <div class="cert-content">
-        <span class="cert-date">{{ cert.issueDate }}</span>
-        <h3>{{ cert.title }}</h3>
-        <h4>{{ cert.issuer }}</h4>
-        
-        <!-- 📝 الملخص -->
-        <p class="cert-summary">{{ cert.summary }}</p>
-
-        <!-- 🔗 رابط LinkedIn -->
-        <a *ngIf="cert.linkedinUrl" [href]="cert.linkedinUrl" target="_blank" class="btn-link">
-          View on LinkedIn
-        </a>
-      </div>
-
     </div>
   </div>
 </section>

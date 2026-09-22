@@ -1,0 +1,41 @@
+<div class="admin-layout">
+  <!-- القائمة الجانبية (Sidebar) -->
+  <aside class="sidebar">
+    <div class="brand">
+      <h2>Portfolio <span class="highlight">Admin</span></h2>
+    </div>
+
+    <nav class="admin-nav">
+      <button 
+        [class.active]="activeTab === 'projects'" 
+        (click)="activeTab = 'projects'">
+       Projects Management 
+      </button>
+
+      <button 
+        [class.active]="activeTab === 'trainings'" 
+        (click)="activeTab = 'trainings'">
+Trainings Management
+      </button>
+    </nav>
+
+    <button class="logout-btn" (click)="onLogout()">
+      Log out
+    </button>
+  </aside>
+
+  <!-- منطقة المحتوى الرئيسية -->
+  <main class="content-area">
+    
+    <!-- قسم إدارة المشاريع -->
+    <div *ngIf="activeTab === 'projects'" class="tab-content">
+      <app-manage-projects></app-manage-projects>
+    </div>
+
+    <!-- قسم إدارة التدريبات -->
+    <div *ngIf="activeTab === 'trainings'" class="tab-content">
+      <app-manage-trainings></app-manage-trainings>
+    </div>
+
+  </main>
+</div>

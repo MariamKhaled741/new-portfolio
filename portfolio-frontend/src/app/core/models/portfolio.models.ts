@@ -63,7 +63,7 @@ export interface ProfileInfo {
   linkedinUrl?: string;
 }
 export interface Education {
-  id: number;
+  id?: number;
   university: string;
   degree: string;
   duration: string;

@@ -10,7 +10,9 @@ namespace portfolio_backend.Data
         }
 
         public DbSet<Project> Projects { get; set; }
+        public DbSet<Training> Trainings { get; set; }
         public DbSet<Certification> Certifications { get; set; }
         public DbSet<ContactMessage> Messages { get; set; }
+
     }
 }

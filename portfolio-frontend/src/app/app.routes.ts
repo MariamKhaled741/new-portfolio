@@ -1,31 +1,28 @@
 import { Routes } from '@angular/router';
+import { authGuard } from './guards/auth-guard';
 
 export const routes: Routes = [
-  // 1. الموقع العام (البورتفوليو)
-  {
-    path: '',
-    loadComponent: () => import('./features/portfolio/pages/home/home').then(m => m.HomeComponent)
+  // 1️⃣ صفحة تسجيل الدخول
+  { 
+    path: 'admin/login', 
+    loadComponent: () => import('./admin/admin-login/admin-login').then(m => m.AdminLogin) 
   },
 
-  // 2. لوحة التحكم (الداشبورد)
-  {
-    path: 'admin',
-    // شيلنا .component من المسار وخلينا الكلاس المحمل اسمه AdminLayout حسب تسميتك
-    loadComponent: () => import('./features/dashboard/pages/admin-layout/admin-layout').then(m => m.AdminLayout)
-  },
-  {
-    path: 'admin/projects',
-    loadComponent: () => import('./features/dashboard/components/manage-projects/manage-projects').then(m => m.ManageProjects)
-  },
-  {
-    path: 'admin/certs',
-    loadComponent: () => import('./features/dashboard/components/manage-certs/manage-certs').then(m => m.ManageCerts)
-  },
-  {
-    path: 'admin/messages',
-    loadComponent: () => import('./features/dashboard/components/view-messages/view-messages').then(m => m.ViewMessages)
+  // 2️⃣ صفحة الداش بورد الرئيسية (محمية بالـ AuthGuard)
+  { 
+    path: 'admin', 
+    canActivate: [authGuard], 
+    loadComponent: () => import('./admin/admin-dashboard/admin-dashboard').then(m => m.AdminDashboard) 
   },
 
-  // 3. مسار احتياطي لأي لينك غلط
-  { path: '**', redirectTo: '' }
+  // 3️⃣ إعادة توجيه الصفحة الرئيسية ورابط الخطأ لصفحة الأدمن
+  { 
+    path: '', 
+    redirectTo: 'admin', 
+    pathMatch: 'full' 
+  },
+  { 
+    path: '**', 
+    redirectTo: 'admin' 
+  }
 ];

@@ -1,0 +1,86 @@
+$purple-primary: #6366f1;
+$purple-dark: #4f46e5;
+$bg-light: #f8fafc;
+$text-dark: #0f172a;
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: $bg-light;
+  direction: ltr;
+
+  .sidebar {
+    width: 280px;
+    background: #ffffff;
+    border-left: 1px solid #e2e8f0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .brand h2 {
+      font-size: 1.4rem;
+      color: $text-dark;
+      margin-bottom: 35px;
+
+      .highlight {
+        color: $purple-primary;
+      }
+    }
+
+    .admin-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 18px;
+        border-radius: 12px;
+        border: none;
+        background: transparent;
+        color: #64748b;
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-align: right;
+
+        &:hover {
+          background-color: #f1f5f9;
+          color: $purple-primary;
+        }
+
+        &.active {
+          background-color: rgba(99, 102, 241, 0.1);
+          color: $purple-primary;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .logout-btn {
+      background: #fef2f2;
+      color: #ef4444;
+      border: 1px solid #fee2e2;
+      padding: 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: auto;
+      transition: all 0.2s;
+
+      &:hover {
+        background: #fee2e2;
+      }
+    }
+  }
+
+  .content-area {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+  }
+}

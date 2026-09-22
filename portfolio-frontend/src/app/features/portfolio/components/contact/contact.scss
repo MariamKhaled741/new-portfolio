@@ -5,6 +5,10 @@ $text-gray: #4b5563;
 $white: #ffffff;
 $border-color: #e5e7eb;
 
+.contact-section {
+  padding: 60px 20px;
+}
+
 .contact-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -12,26 +16,32 @@ $border-color: #e5e7eb;
   .contact-header {
     text-align: center;
     margin-bottom: 50px;
+
     h2 {
       font-size: 2.5rem;
       color: $text-dark;
       font-weight: 700;
+
       .highlight { color: $purple-primary; }
     }
+
     .contact-subtitle { color: $text-gray; font-size: 1.1rem; margin-top: 10px; }
   }
 
   .contact-content {
     display: flex;
-    gap: 40px;
+    gap: 0;
     background: $white;
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+
+    @media (max-width: 850px) {
+      flex-direction: column;
+    }
   }
 
-  // لوحة معلومات التواصل (اليسار)
   .contact-info-panel {
     flex: 1;
     background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
@@ -42,42 +52,7 @@ $border-color: #e5e7eb;
     justify-content: space-between;
 
     h3 { font-size: 1.6rem; font-weight: 700; margin-bottom: 15px; }
-    .panel-desc { color: rgba(255, 255, 255, 0.85); font-size: 0.98rem; line-height: 1.6; margin-bottom: 35px; }
-
-    .info-links {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-
-      .info-item {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        text-decoration: none;
-        color: $white;
-        transition: transform 0.2s ease;
-
-        &:hover { transform: translateX(5px); }
-
-        .icon-box {
-          width: 45px;
-          height: 45px;
-          background: rgba(255, 255, 255, 0.15);
-          border-radius: 12px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 1.2rem;
-        }
-
-        .info-text {
-          display: flex;
-          flex-direction: column;
-          span { font-size: 0.8rem; color: rgba(255, 255, 255, 0.7); }
-          strong { font-size: 0.95rem; font-weight: 600; margin-top: 2px; }
-        }
-      }
-    }
+    .panel-desc { color: rgba(255, 255, 255, 0.85); font-size: 0.98rem; line-height: 1.6; }
 
     .social-links-wrapper {
       margin-top: 40px;
@@ -96,7 +71,8 @@ $border-color: #e5e7eb;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 1.1rem;
+          font-weight: bold;
+          font-size: 0.9rem;
           transition: all 0.3s ease;
           text-decoration: none;
 
@@ -111,13 +87,12 @@ $border-color: #e5e7eb;
     }
   }
 
-  // لوحة الفورم (اليمين)
   .contact-form-panel {
     flex: 1.3;
     padding: 45px;
 
     .form-group {
-      margin-bottom: 22px;
+      margin-bottom: 20px;
       display: flex;
       flex-direction: column;
       gap: 8px;
@@ -140,6 +115,21 @@ $border-color: #e5e7eb;
           box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
         }
       }
+
+      .error-text {
+        color: #ef4444;
+        font-size: 0.8rem;
+      }
+    }
+
+    .alert {
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      margin-bottom: 15px;
+
+      &-success { background-color: #ecfdf5; color: #065f46; }
+      &-danger { background-color: #fef2f2; color: #991b1b; }
     }
 
     .submit-btn {
@@ -152,18 +142,12 @@ $border-color: #e5e7eb;
       font-size: 1rem;
       cursor: pointer;
       display: flex;
-      margin: 0 auto;         // 2. 👈 ده السطر السحري اللي هيجيبه في النص بالظبط
-justify-content: center;
-      gap: 10px;
+      margin: 0 auto;
+      justify-content: center;
       transition: background-color 0.2s;
 
       &:hover { background-color: #4f46e5; }
+      &:disabled { opacity: 0.6; cursor: not-allowed; }
     }
-  }
-
-  @media (max-width: 850px) {
-    .contact-content { flex-direction: column; }
-    .contact-info-panel { padding: 35px; gap: 30px; }
-    .contact-form-panel { padding: 35px; }
   }
 }

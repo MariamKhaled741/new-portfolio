@@ -15,7 +15,7 @@ namespace portfolio_backend.Controllers
                 Id = 1,
                 FullName = "Mariam Khaled Ahmed ",
                 Title = "Full-Stack Software Engineer & Data Science Student",
-                Bio = "Passionate Full-Stack Developer specializing in .NET Core, Angular, and building scalable web applications.",
+                Bio = "Passionate Full-Stack Developer specializing in .NET Core, Angular, React and building scalable web applications.",
                 ImageUrl = "https://localhost:7001/uploads/profile.jpg",
                 CvUrl = "https://localhost:7001/uploads/Mariam_Khaled_CV.pdf",
                 GithubUrl = "https://github.com/MariamKhaled741",

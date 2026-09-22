@@ -1,25 +1,32 @@
 <section class="extracurricular-section">
-  <h2>الأنشطة الطلابية والتطوعية (Extracurricular Activities)</h2>
+  <div class="activities-container">
+    <div class="activities-header">
+      <h2>Extracurricular Activities and <span class="highlight">Volunteer Work</span></h2>
+      <p class="activities-subtitle">Extracurricular Activities & Volunteer Work</p>
+    </div>
 
-  <div *ngIf="isLoading" class="loading">جاري تحميل الأنشطة...</div>
+    <div *ngIf="isLoading" class="loading">جاري تحميل الأنشطة...</div>
 
-  <div *ngIf="errorMessage && !isLoading" class="error-msg">
-    {{ errorMessage }}
-  </div>
+    <div *ngIf="errorMessage && !isLoading" class="error-msg">
+      {{ errorMessage }}
+    </div>
 
-  <div *ngIf="!isLoading && !errorMessage && activities.length === 0">
-    لا توجد أنشطة مسجلة حالياً.
-  </div>
+    <div *ngIf="!isLoading && !errorMessage && activities.length === 0" class="no-data">
+      لا توجد أنشطة مسجلة حالياً.
+    </div>
 
-  <div *ngIf="!isLoading && activities.length > 0" class="activities-list">
-    <div *ngFor="let item of activities" class="activity-card">
-      <div class="activity-icon">🌟</div>
-      <div class="activity-info">
-        <h3>{{ item.title }}</h3>
-        <p class="org"><strong>الجهة:</strong> {{ item.organization }} <span *ngIf="item.role">({{ item.role }})</span></p>
-        <p *ngIf="item.description" class="desc">{{ item.description }}</p>
-        <div class="dates" *ngIf="item.startDate">
-          <small>{{ item.startDate | date:'mediumDate' }} - {{ item.endDate ? (item.endDate | date:'mediumDate') : 'حتى الآن' }}</small>
+    <div *ngIf="!isLoading && activities.length > 0" class="activities-grid">
+      <div *ngFor="let item of activities" class="activity-card">
+        <div class="activity-icon-box">🌟</div>
+        <div class="activity-info">
+          <div class="activity-meta">
+            <h3>{{ item.title }}</h3>
+            <span class="activity-date" *ngIf="item.startDate">
+              {{ item.startDate | date:'mediumDate' }} - {{ item.endDate ? (item.endDate | date:'mediumDate') : 'حتى الآن' }}
+            </span>
+          </div>
+          <h4>{{ item.organization }} <span *ngIf="item.role">({{ item.role }})</span></h4>
+          <p *ngIf="item.description" class="activity-desc">{{ item.description }}</p>
         </div>
       </div>
     </div>
