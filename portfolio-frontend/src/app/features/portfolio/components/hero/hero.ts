@@ -1,7 +1,7 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProfileService } from '../../../../core/services/profile.service';
-import { ProfileInfo } from '../../../../core/models/portfolio.models';
+import { PortfolioService } from '../../../../services/portfolio'; // 👈 استيراد السيرفيس فقط
+import { ProfileInfo } from '../../../../core/models/portfolio.models'; // 👈 استيراد الموديل من مكانه الصحيح
 
 @Component({
   selector: 'app-hero',
@@ -11,26 +11,23 @@ import { ProfileInfo } from '../../../../core/models/portfolio.models';
   styleUrl: './hero.scss'
 })
 export class HeroComponent implements OnInit {
-  profile: ProfileInfo | null = null;
-  isLoading: boolean = true;
+  heroData: ProfileInfo | null = null;
+  private baseUrl = 'http://localhost:5000';
 
-  constructor(
-    private profileService: ProfileService,
-    private cdr: ChangeDetectorRef
-  ) {}
+  constructor(private portfolioService: PortfolioService) {}
 
   ngOnInit(): void {
-    this.profileService.getProfile().subscribe({
+    this.portfolioService.getProfile().subscribe({
       next: (data) => {
-        this.profile = data;
-        this.isLoading = false;
-        this.cdr.detectChanges();
+        this.heroData = data;
+
+        if (this.heroData && this.heroData.cvUrl) {
+          if (!this.heroData.cvUrl.startsWith('http')) {
+            this.heroData.cvUrl = `${this.baseUrl}${this.heroData.cvUrl}`;
+          }
+        }
       },
-      error: (err) => {
-        console.error('Error fetching profile data:', err);
-        this.isLoading = false;
-        this.cdr.detectChanges();
-      }
+      error: (err) => console.error('Error loading profile:', err)
     });
   }
 }

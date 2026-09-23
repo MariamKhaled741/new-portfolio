@@ -26,7 +26,7 @@ export interface Project {
 }
 
 export interface Training {
-  id: number;
+  id?: number;
   title: string;
   provider: string;
   startDate?: string;

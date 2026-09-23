@@ -14,5 +14,7 @@ namespace portfolio_backend.Data
         public DbSet<Certification> Certifications { get; set; }
         public DbSet<ContactMessage> Messages { get; set; }
 
+        public DbSet<ProfileInfo> ProfileInfos { get; set; }
+
     }
 }

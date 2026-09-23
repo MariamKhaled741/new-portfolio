@@ -1,35 +1,45 @@
-<section id="trainings" class="trainings-container">
+<div class="trainings-container">
+  <!-- الهيدر الرئيسي للسكشن -->
   <div class="trainings-header">
     <h2>My <span class="highlight">Trainings</span></h2>
     <p class="trainings-subtitle">Courses and training programs I have completed</p>
   </div>
 
-  <div *ngIf="isLoading" class="loading">جاري تحميل البيانات...</div>
-
-  <div *ngIf="errorMessage && !isLoading" class="error-msg">
-    {{ errorMessage }}
+  <!-- 1️⃣ حالة التحميل Loading State -->
+  <div *ngIf="isLoading" style="text-align: center; color: #4b5563; font-weight: 500;">
+    Loading trainings...
   </div>
 
-  <div *ngIf="!isLoading && !errorMessage && trainings.length === 0">
-    لا توجد دورات تدريبية مسجلة حالياً.
-  </div>
-
-  <div *ngIf="!isLoading && trainings.length > 0" class="trainings-list">
+  <!-- 2️⃣ قائمة التدريبات القادمة من الداتا بيز -->
+  <div *ngIf="!isLoading && trainings && trainings.length > 0" class="trainings-list">
     <div *ngFor="let item of trainings" class="training-card">
       
+      <!-- أيقونة الكارت -->
 
+      <!-- محتوى الكارت -->
       <div class="card-content">
+        
         <div class="card-meta">
           <h3>{{ item.title }}</h3>
-          <div class="training-date" *ngIf="item.startDate">
-            {{ item.startDate | date:'mediumDate' }} - {{ item.endDate ? (item.endDate | date:'mediumDate') : 'مستمر' }}
-          </div>
+          <span *ngIf="item.startDate || item.endDate" class="training-date">
+            {{ item.startDate }} <ng-container *ngIf="item.endDate">- {{ item.endDate }}</ng-container>
+          </span>
         </div>
 
+        <!-- جهة التدريب Provider -->
         <h4>{{ item.provider }}</h4>
-        <p *ngIf="item.description" class="training-desc">{{ item.description }}</p>
-      </div>
 
+        <!-- الوصف -->
+        <p *ngIf="item.description" class="training-desc">
+          {{ item.description }}
+        </p>
+
+      </div>
     </div>
   </div>
-</section>
+
+  <!-- 3️⃣ حالة عدم وجود بيانات -->
+  <div *ngIf="!isLoading && (!trainings || trainings.length === 0)" style="text-align: center; color: #4b5563;">
+    No training programs added yet.
+  </div>
+</div>

@@ -18,6 +18,7 @@ export class AdminDashboard {
 
   onLogout() {
     localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('token');
     this.router.navigate(['/admin/login']);
   }
 }

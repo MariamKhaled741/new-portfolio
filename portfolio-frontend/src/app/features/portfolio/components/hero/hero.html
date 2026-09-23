@@ -1,39 +1,30 @@
-<section class="hero-container" *ngIf="profile">
-  <!-- الجانب الأيسر: النصوص والأزرار -->
+<div class="hero-container" *ngIf="heroData">
   <div class="hero-left">
-    <h1 class="hero-title">Hi! I'm <span class="highlight">{{ profile.fullName }}</span></h1>
-    <h2 class="hero-subtitle">{{ profile.title }}</h2>
-    <p class="hero-bio">{{ profile.bio }}</p>
+    <h1 class="hero-title">
+      Hello, I'm <span class="highlight">{{ heroData.fullName }}</span>
+    </h1>
+    <h2 class="hero-subtitle">{{ heroData.title }}</h2>
+    <p class="hero-bio">{{ heroData.bio }}</p>
 
-    <div class="hero-actions">
-      <!-- زر تحميل الـ CV -->
-      <a *ngIf="profile.cvUrl" [href]="profile.cvUrl" target="_blank" class="btn-download" download>
-       Download CV 
+    <!-- زر تحميل الـ CV -->
+    <div class="hero-actions" *ngIf="heroData.cvUrl">
+      <a [href]="heroData.cvUrl" target="_blank" download class="btn-download">
+        Download CV
       </a>
-      
-      <!-- زر التواصل -->
-      <a href="#contact" class="btn-download btn-secondary">Contact Me</a>
     </div>
 
-    <!-- روابط التواصل الاجتماعي -->
-    <div class="social-links" *ngIf="profile.githubUrl || profile.linkedinUrl">
-      <a *ngIf="profile.githubUrl" [href]="profile.githubUrl" target="_blank">GitHub</a>
-      <a *ngIf="profile.linkedinUrl" [href]="profile.linkedinUrl" target="_blank">LinkedIn</a>
+    <!-- روابط التواصل -->
+    <div class="social-links">
+      <a *ngIf="heroData.githubUrl" [href]="heroData.githubUrl" target="_blank">GitHub</a>
+      <a *ngIf="heroData.linkedinUrl" [href]="heroData.linkedinUrl" target="_blank">LinkedIn</a>
     </div>
   </div>
 
-  <!-- الجانب الأيمن: الصورة والـ Bubbles -->
-  <div class="hero-right">
+  <div class="hero-right" *ngIf="heroData.imageUrl">
     <div class="image-wrapper">
       <div class="image-placeholder">
-        <img *ngIf="profile.imageUrl" [src]="profile.imageUrl" [alt]="profile.fullName">
+        <img [src]="heroData.imageUrl" [alt]="heroData.fullName" />
       </div>
-      
-      <!-- الفقاعات الديكورية -->
-      <div class="bubble bubble-1">Frontend </div>
-      <div class="bubble bubble-2">Backend </div>
-      <div class="bubble bubble-3">Data Science </div>
-      
     </div>
   </div>
-</section>
+</div>

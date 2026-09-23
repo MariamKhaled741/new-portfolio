@@ -1,7 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TrainingService } from '../../../../core/services/training.service';
-import { Training } from '../../../../core/models/portfolio.models';
+import { PortfolioService } from '../../../../services/portfolio'; // 👈 تأكدي من المسار الصحيح للسيرفيس
 
 @Component({
   selector: 'app-trainings',
@@ -11,24 +10,30 @@ import { Training } from '../../../../core/models/portfolio.models';
   styleUrl: './trainings.scss'
 })
 export class TrainingsComponent implements OnInit {
-  trainings: Training[] = [];
-  isLoading: boolean = true;
-  errorMessage: string = '';
+  trainings: any[] = [];
+  isLoading: boolean = true; // 👈 1. إعلان المتغير هنا لمنع الإيرور
 
   constructor(
-    private trainingService: TrainingService,
+    private portfolioService: PortfolioService,
     private cdr: ChangeDetectorRef
   ) {}
 
-ngOnInit(): void {
-  this.trainingService.getTrainings().subscribe({
+  ngOnInit(): void {
+    this.loadTrainings();
+  }
+
+  loadTrainings(): void {
+  this.isLoading = true;
+
+  this.portfolioService.getTrainings().subscribe({
     next: (data) => {
+      console.log('📢 Data received for trainings:', data); // 👈 طباعة البيانات القادمة من قاعدة البيانات
       this.trainings = data;
       this.isLoading = false;
       this.cdr.detectChanges();
     },
     error: (err) => {
-      console.error('Trainings Error:', err);
+      console.error('❌ Error fetching trainings:', err);
       this.isLoading = false;
       this.cdr.detectChanges();
     }

@@ -1,19 +1,35 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { of } from 'rxjs';
 
-import { Hero } from './hero';
+import { HeroComponent } from './hero';
+import { PortfolioService } from '../../../../services/portfolio';
 
-describe('Hero', () => {
-  let component: Hero;
-  let fixture: ComponentFixture<Hero>;
+describe('HeroComponent', () => {
+  let component: HeroComponent;
+  let fixture: ComponentFixture<HeroComponent>;
+
+  // عمل Mock للسيرفيس لمنع إرسال طلبات real HTTP أثناء الاختبار
+  const portfolioServiceMock = {
+    getProfile: () => of({
+      fullName: 'Mariam Khaled',
+      title: 'Full-Stack Developer',
+      bio: 'Bio text',
+      cvUrl: '/uploads/cv.pdf'
+    })
+  };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Hero],
+      imports: [HeroComponent, HttpClientTestingModule],
+      providers: [
+        { provide: PortfolioService, useValue: portfolioServiceMock }
+      ]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Hero);
+    fixture = TestBed.createComponent(HeroComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {

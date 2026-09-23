@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Project } from '../admin/manage-projects/manage-projects';
-import { Training } from '../admin/manage-trainings/manage-trainings';
+
+// تجميع كل الـ Imports في سطر واحد لمنع تكرار المسارات واللخبطة
+import { Project, Training, ProfileInfo } from '../core/models/portfolio.models';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PortfolioService {
-  // ⚠️ غيّري الـ Port (مثلاً 5000 أو 7000) حسب الرقم اللي مشروع الـ .NET شغال عليه عندك
-private baseUrl = 'http://localhost:5000/api';
+  private baseUrl = 'http://localhost:5000/api';
 
   constructor(private http: HttpClient) {}
 
@@ -45,5 +45,14 @@ private baseUrl = 'http://localhost:5000/api';
 
   deleteTraining(id: number | string): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/Trainings/${id}`);
+  }
+
+  // ================= PROFILE API =================
+  getProfile(): Observable<ProfileInfo> {
+    return this.http.get<ProfileInfo>(`${this.baseUrl}/Profile`);
+  }
+
+  updateProfile(profileData: ProfileInfo): Observable<ProfileInfo> {
+    return this.http.put<ProfileInfo>(`${this.baseUrl}/Profile`, profileData);
   }
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProjectService } from '../../../../core/services/project.service';
-import { Project } from '../../../../core/models/portfolio.models';
+import { PortfolioService } from '../../../../services/portfolio'; // 👈 تأكدي من مسار الـ PortfolioService
 
 @Component({
   selector: 'app-projects',
@@ -11,29 +10,20 @@ import { Project } from '../../../../core/models/portfolio.models';
   styleUrl: './projects.scss'
 })
 export class ProjectsComponent implements OnInit {
-  projects: Project[] = [];
-  isLoading: boolean = true;
-  errorMessage: string = '';
+  projects: any[] = [];
 
   constructor(
-    private projectService: ProjectService,
+    private portfolioService: PortfolioService,
     private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
-    this.projectService.getProjects().subscribe({
+    this.portfolioService.getProjects().subscribe({
       next: (data) => {
-        console.log('Projects Data Received:', data);
         this.projects = data;
-        this.isLoading = false;
-        this.cdr.detectChanges();
+        this.cdr.detectChanges(); // تحديث الواجهة فوراً عند استلام البيانات من قاعدة البيانات
       },
-      error: (err) => {
-        console.error('Error fetching projects:', err);
-        this.errorMessage = 'تعذر تحميل المشاريع.';
-        this.isLoading = false;
-        this.cdr.detectChanges();
-      }
+      error: (err) => console.error('Error fetching projects:', err)
     });
   }
 }
